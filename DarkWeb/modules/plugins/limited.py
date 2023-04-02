@@ -1,0 +1,15 @@
+from DarkWeb import *
+from DarkWeb.lib import *
+
+from partharjun.help import *
+
+@randydev(command(["limit", "limited"], cmd) & owner)
+async def spamban_command(client: Client, m: Message):
+    await spamban(client, m)
+
+add_command_help(
+    "limited",
+    [
+        [f"limit or .limited", "Check Limit telegram from @SpamBot."],
+    ],
+)
